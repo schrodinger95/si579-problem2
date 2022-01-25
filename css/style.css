@@ -1,0 +1,163 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+nav{
+    background-color: black;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+nav li{
+    padding: 10px 0;
+}
+  
+nav a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+  
+nav a:hover { 
+    text-decoration: underline;
+}
+
+main{
+    margin: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 32px;
+    text-decoration: underline overline #d1c183;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.text-box{
+    text-transform: uppercase;
+    background: url('../img/home.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.text-box h3{
+    background: rgba(255, 255, 255, .8);
+    padding: 40px 0;
+    font-size: 32px;
+    animation: change-text 2s linear infinite;
+}
+
+@keyframes change-text {
+    50% {
+        color: #d79265;
+        letter-spacing: 10px;
+    }
+  
+    0%, 100%{
+        color: black;
+        letter-spacing: 0;
+    }
+}
+
+main ul{
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+main li::before{
+    content:'\2605\00a0';
+}
+
+main li::after{
+    content:'\00a0\2605';
+}
+
+.home h2::after{
+    content:'\2198';
+}
+
+.link-box{
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 25%;
+    background: transparent;
+    position: relative;
+}
+
+.link-box:before{
+    transition: all 0.8s cubic-bezier(0.7, -0.5, 0.2, 2);
+    -webkit-transition: all 0.8s cubic-bezier(0.7, -0.5, 0.2, 2);
+    content: '';
+    background: #ffecb7;
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.link-box:hover:before,
+.link-box:focus:before {
+  background: #ffecb7;
+  width: 100%;
+}
+
+.link-box a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    mix-blend-mode: darken;
+}
+
+.link-box a:visited{
+    color: black;
+}
+
+.link-box a::before{
+    content: '>> '
+}
+
+.link-box a::after{
+    content: ' <<'
+}
+
+.img-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+}
+
+.img-box img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
