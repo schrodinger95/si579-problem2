@@ -130,6 +130,7 @@ main li::after{
     text-decoration: none;
     font-weight: bold;
     mix-blend-mode: darken;
+    color: black;
 }
 
 .link-box a:visited{
